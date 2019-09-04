@@ -20,7 +20,7 @@ public class Smiley extends Actor
     private void checkIfDead(){
         Object baby = getOneIntersectingObject(Baby.class);
         if(baby!=null){
-            Greenfoot.stop();
+            //Greenfoot.stop();
         }
     }
     
