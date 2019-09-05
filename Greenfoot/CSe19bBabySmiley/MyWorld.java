@@ -18,10 +18,11 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        
-        this.act();
-        Smiley player = new Smiley();
-        addObject(player, 300, 350);
+        for(int i=5;i>0;i--)
+        {
+            Smiley player = new Smiley();
+            addObject(player, 300, 350);
+        }   
     }
     
     public void act(){
