@@ -12,9 +12,11 @@ public class Flower extends Actor
         setSize(2);
         int result = add(4,5);
         someResult = result;
+        MyWorld mw = (MyWorld)getWorld();
+        
     }
     
-    private void setSize(int size){ // Parameter
+    public void setSize(int size){ // Parameter
         this.size = size;
     }
     
