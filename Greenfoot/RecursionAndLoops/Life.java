@@ -19,8 +19,16 @@ public class Life extends Actor
         this.offsetY = offsetY;
     }
     
+    public void addToWorld(World w){
+        w.addObject(this, 
+            player.getX()+offsetX, 
+            player.getY()+offsetY);
+    }
+    
     public void act() 
     {
-        // Add your action code here.
+        setLocation(
+            player.getX()+offsetX,  // X location
+            player.getY()+offsetY); // Y location
     }    
 }
