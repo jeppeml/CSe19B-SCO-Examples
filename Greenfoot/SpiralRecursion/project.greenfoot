@@ -1,0 +1,12 @@
+#Greenfoot properties
+#Tue Sep 10 09:14:37 CEST 2019
+class.Bomb.image=bomb.png
+mainWindow.width=850
+class.Bomb.superclass=greenfoot.Actor
+class.MyWorld.superclass=greenfoot.World
+project.charset=UTF-8
+version=3.0.0
+world.lastInstantiated=MyWorld
+mainWindow.y=40
+mainWindow.x=40
+mainWindow.height=600
