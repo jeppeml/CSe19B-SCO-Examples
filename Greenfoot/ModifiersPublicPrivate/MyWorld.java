@@ -37,9 +37,12 @@ public class MyWorld extends World
             }*/
     }
     
-    public void setFinished(Croc croc){
-        end.setFinished(croc, finish);
+    public void setFinished(){
         finish++;
+        if(finish==6)
+        {
+            Greenfoot.setWorld(new EndWorld());
+        }
     }
 }
 

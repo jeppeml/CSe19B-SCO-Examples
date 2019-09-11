@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Croc extends Actor
 {
-    
+    private boolean isFinished = false;
     /**
      * Act - do whatever the Croc wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,6 +17,13 @@ public class Croc extends Actor
     {
         int random = Greenfoot.getRandomNumber(10);
         move(random);
-        // Add your action code here.
+        MyWorld w = ((MyWorld)getWorld());
+        if(!finished){
+            if(getOneIntersectingObject(Line.class)!=null)
+            {
+                w.setFinished();
+                isFinished = true;
+            }
+        }
     }    
 }

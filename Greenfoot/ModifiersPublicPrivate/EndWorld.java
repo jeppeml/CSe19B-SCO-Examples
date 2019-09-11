@@ -41,7 +41,8 @@ public class EndWorld extends World
     
     public void displayWinner(){
         for(int i = 0; i<finishedCrocs.length;i++){
-            finishedCrocs[i]
+            finishedCrocs[i]; // list of finished crocs loop
+                              // through each one
         }
     }
 }
