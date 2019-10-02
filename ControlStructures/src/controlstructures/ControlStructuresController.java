@@ -31,19 +31,32 @@ public class ControlStructuresController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
         String userInput = txtInput.getText();
-        if(userInput.equals("42"))
-        {
-            lblOutput.setText("The meaning of life, the universe and everything");
-        }
         
-        if(userInput.equals("Pi"))
-        {
-            lblOutput.setText("" + Math.PI);
+        switch (userInput) {
+            case "42":
+                lblOutput.setText("The meaning of life, the universe and everything");
+                break;
+            case "Pi":
+                lblOutput.setText("" + Math.PI);
+                break;
+            case "Cat":
+                lblOutput.setText("Awesome!");
+                break;
+            default:
+                throw new AssertionError();
         }
         /*
         if(userInput.equals("42"))
         {
             lblOutput.setText("The meaning of life, the universe and everything");
+        }
+        else if(userInput.equals("Pi"))
+        {
+            lblOutput.setText("" + Math.PI);
+        }
+        else if(userInput.equals("Cat"))
+        {
+            lblOutput.setText("Awesome!");
         }*/
     }
     
