@@ -31,7 +31,7 @@ public class ControlStructuresController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
         String userInput = txtInput.getText();
-        
+        /*
         switch (userInput) {
             case "42":
                 lblOutput.setText("The meaning of life, the universe and everything");
@@ -45,7 +45,7 @@ public class ControlStructuresController implements Initializable {
             default:
                 throw new AssertionError();
         }
-        /*
+        
         if(userInput.equals("42"))
         {
             lblOutput.setText("The meaning of life, the universe and everything");
@@ -57,7 +57,12 @@ public class ControlStructuresController implements Initializable {
         else if(userInput.equals("Cat"))
         {
             lblOutput.setText("Awesome!");
-        }*/
+        }
+        else
+        {
+            throw new AssertionError();
+        }
+        */
     }
     
     @Override
