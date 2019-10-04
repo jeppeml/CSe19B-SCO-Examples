@@ -5,10 +5,11 @@
  */
 package arraysandloops;
 
+
 /**
  *
  * @author jeppjleemoritzled
  */
-public class Monkey {
-    
+public class Monkey{
+
 }

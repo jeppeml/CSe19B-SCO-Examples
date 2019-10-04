@@ -6,10 +6,8 @@
 package arraysandloops;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -32,11 +30,15 @@ public class AppController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
+        ObservableList ol = listPersons.getItems();
+        
         for (int i = 0; i < 1000; i++) {
             Person p = new Person("220599-4455", "Jeppe Young");
-            listPersons.getItems().add(p);
+            ol.add(p);
         }
-        Monkey m = new Monkey();
+        
+        
+        
         
         
         
