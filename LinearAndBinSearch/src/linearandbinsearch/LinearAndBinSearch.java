@@ -24,6 +24,10 @@ public class LinearAndBinSearch {
     private static int searchBinary(int[] arr, int searchNumber, int start, int end){
         int mid = start + (end-start)/2;
         
+        if(start>end){
+            return -1;
+        }
+        
         if(arr[mid]>searchNumber)
         {
             return searchBinary(arr, searchNumber, start, mid-1);
@@ -34,8 +38,14 @@ public class LinearAndBinSearch {
         else if(arr[mid]==searchNumber){
             return mid;
         }
-        return -1;
         
+        return -2;
+        
+    }
+    
+    private static int searchBinary(int[] arr, int searchNumber){
+    {
+        return searchBinary(arr, searchNumber, 0, arr.length-1);
     }
     /**
      * @param args the command line arguments
@@ -45,12 +55,12 @@ public class LinearAndBinSearch {
         System.out.println("Rhello cruel world!");
         System.out.println("Element number 4: " + numbers[4]);
         
-        int index = searchBinary(numbers, 27, 0, numbers.length-1);
+        int index = searchBinary(numbers, 81);
         if(index==-1){
             System.out.println("These are not the droids you are looking for! (Waves hand)");
         }
         else{
-            System.out.println("81 is at: " + index);
+            System.out.println("80 is at: " + index);
         }
     }
 
