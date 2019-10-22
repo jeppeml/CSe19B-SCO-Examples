@@ -44,3 +44,6 @@ hs_err_pid*
 /ArraysAndLoops/build/
 /LinearAndBinSearch/nbproject/private/
 /LinearAndBinSearch/build/
+/Polymorphism/nbproject/private/
+/Polymorphism/dist/
+/Polymorphism/build/
