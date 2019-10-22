@@ -35,10 +35,9 @@ public class AppController implements Initializable {
     }
     
     private void makeAnimalsSound(){
-        String s = "Hej";
         
-        for (Soundable animal : allAnimals) {
-            //System.out.println("Animal: " + animal.getName());
+        for (Animal animal : allAnimals) {
+            System.out.println("Animal: " + animal.getName());
             animal.makeSound();
         }
         
