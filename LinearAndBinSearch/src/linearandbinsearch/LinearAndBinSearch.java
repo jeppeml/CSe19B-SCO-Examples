@@ -20,7 +20,7 @@ public class LinearAndBinSearch {
         JeppeSearch searcher = new JeppeSearch();
         
         int search = 81;
-        int index = searcher.searchLinear(numbers, search);
+        int index = searcher.searchBinary(numbers, search);
         if(index==-1){
             System.out.println("These are not the droids you are looking for! (Waves hand)");
         }
