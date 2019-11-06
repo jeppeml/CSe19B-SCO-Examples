@@ -30,9 +30,9 @@ public class Person {
         this.name = name;
     }
 
-    
-    
-
-  
+    @Override
+    public String toString() {
+        return id + ", " + name;
+    }
 
 }
