@@ -6,7 +6,7 @@
 package filereadingwriting.bll;
 
 import filereadingwriting.be.Person;
-import filereadingwriting.dal.PersonReader;
+import filereadingwriting.dal.PersonDAO;
 import java.util.List;
 
 /**
@@ -14,7 +14,7 @@ import java.util.List;
  * @author jeppjleemoritzled
  */
 public class BLLManager {
-    private PersonReader pr = new PersonReader();
+    private PersonDAO pr = new PersonDAO();
     
     public List<Person> getAllPersons(){
         return pr.getAllPersons();
