@@ -7,10 +7,6 @@ package filereadingwriting.gui;
 
 import filereadingwriting.be.Person;
 import filereadingwriting.bll.BLLManager;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;

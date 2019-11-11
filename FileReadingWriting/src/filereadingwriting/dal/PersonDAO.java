@@ -21,7 +21,7 @@ import java.util.logging.Logger;
  *
  * @author jeppjleemoritzled
  */
-public class PersonDAO {
+public class PersonDAO implements IPersonDAO{
     
     public static void main(String[] args){
         Person p = new Person();
