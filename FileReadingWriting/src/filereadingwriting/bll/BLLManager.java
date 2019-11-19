@@ -7,7 +7,6 @@ package filereadingwriting.bll;
 
 import filereadingwriting.be.Person;
 import filereadingwriting.dal.IPersonDAO;
-import filereadingwriting.dal.PersonDAO;
 import filereadingwriting.dal.PersonRAFDAO;
 import java.util.List;
 
