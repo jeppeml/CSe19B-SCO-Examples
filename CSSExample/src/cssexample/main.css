@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3. feb. 2020, 12.11.04
+    Author     : jeppjleemoritzled
+*/
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
+.toppane{
+    -fx-font-family: 'Bangers', cursive;
+    
+}
+
+.label{
+    -fx-background-color: lightgray;
+    -fx-font-size: 20px;
+    
+    -fx-text-fill: red;
+    
+}
+
+.button:hover{
+    -fx-font-size: 50px;
+}
