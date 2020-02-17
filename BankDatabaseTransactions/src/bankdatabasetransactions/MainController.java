@@ -5,6 +5,9 @@
  */
 package bankdatabasetransactions;
 
+import bankdatabasetransactions.be.Account;
+import bankdatabasetransactions.dal.AccountDAOMock;
+import bankdatabasetransactions.dal.IAccountDAO;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -44,15 +47,19 @@ public class MainController implements Initializable {
         
         columnBalance.setCellValueFactory(
                 cell->cell.getValue().balanceProperty().asObject());
-        Account acc = new Account();
-        acc.setId(5);
-        acc.setName("Piotr Stegovski");
-        acc.setBalance(-45001);
-        tableAccounts.getItems().add(acc);
+        
+        IAccountDAO accDAO = new AccountDAOMock();
+        
+        tableAccounts.getItems().setAll(accDAO.getAll());
     }    
 
     @FXML
     private void handleWithdraw(ActionEvent event) {
+        Account selected = tableAccounts.getSelectionModel().getSelectedItem();
+        double selectedAmount = Double.parseDouble(txtAmount.getText());
+        double balance = selected.getBalance();
+        double result = balance-selectedAmount;
+        selected.setBalance(result);
     }
     
 }
