@@ -6,6 +6,7 @@
 package bankdatabasetransactions;
 
 import bankdatabasetransactions.be.Account;
+import bankdatabasetransactions.dal.AccountDAODB;
 import bankdatabasetransactions.dal.AccountDAOMock;
 import bankdatabasetransactions.dal.IAccountDAO;
 import java.net.URL;
@@ -36,6 +37,7 @@ public class MainController implements Initializable {
     @FXML
     private TextField txtAmount;
     
+    private IAccountDAO accDAO = new AccountDAODB();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -48,8 +50,6 @@ public class MainController implements Initializable {
         columnBalance.setCellValueFactory(
                 cell->cell.getValue().balanceProperty().asObject());
         
-        IAccountDAO accDAO = new AccountDAOMock();
-        
         tableAccounts.getItems().setAll(accDAO.getAll());
     }    
 
@@ -57,9 +57,8 @@ public class MainController implements Initializable {
     private void handleWithdraw(ActionEvent event) {
         Account selected = tableAccounts.getSelectionModel().getSelectedItem();
         double selectedAmount = Double.parseDouble(txtAmount.getText());
-        double balance = selected.getBalance();
-        double result = balance-selectedAmount;
-        selected.setBalance(result);
+        accDAO.withdraw(selected, selectedAmount);
+       
     }
     
 }
